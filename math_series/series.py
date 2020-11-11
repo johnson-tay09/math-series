@@ -32,4 +32,16 @@ def lucas(i):
         return lucas(i - 1) + lucas(i - 2)
 
 
-# def sum_series():
+def sum_series(num, first=0, second=1):
+    if num < 0:
+        print("Incorrect input")
+    elif num == 0:
+        return 2
+    elif num == 1:
+        return 1
+    elif num == 2:
+        return 3
+    elif num == 3:
+        return 4
+    else:
+        return sum_series(num - 1, first, second) + sum_series(num - 2, first, second)
